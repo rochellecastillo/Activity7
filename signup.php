@@ -17,6 +17,12 @@
             $pw=$_POST['pw'];
             $bdate=$_POST['bdate'];
             $contact=$_POST['contact'];
+            if (!preg_match("/^[a-zA-Z ]*$/",$fn)) {
+                $fnErr = "Only letters and white space allowed";
+            }
+            if (!preg_match("/^[a-zA-Z ]*$/",$ln)) {
+                $lnErr = "Only letters and white space allowed";
+            }
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $emailErr = "Invalid email format";
             }

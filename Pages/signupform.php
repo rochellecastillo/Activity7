@@ -10,12 +10,26 @@
                     <div class="col-md-12">
                         <label for="fn" class="text-white">Firstname</label>
                         <input type="text" class="form-control" name="fn" value="<?php if(isset($fn)){echo $fn;}?>" required>
+                         <div class="text-warning"><small>
+                            <?php
+                                if(isset($fnErr)){
+                                    echo $fnErr;
+                                }
+                            ?></small>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <label for="ln" class="text-white">Lastname</label>
                         <input type="text" class="form-control" name="ln" value="<?php if(isset($ln)){echo $ln;}?>" required>
+                         <div class="text-warning"><small>
+                            <?php
+                                if(isset($lnErr)){
+                                    echo $lnErr;
+                                }
+                            ?></small>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
